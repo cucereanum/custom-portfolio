@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+.nav {
+  background: rgb(0, 0, 0);
+  display: flex;
+  color: rgb(183, 184, 196);
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 9px 17px 9px rgba(0,0,0,0.46);
+  font-family: 'Redressed', cursive;
+}
+
+.nav__header {
+  margin-left: 1rem;
+  transition: 0.3s color;
+}
+h3 {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.nav__header:hover {
+  color: #fff;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin-right: 2rem;
+  
+}
+
+.nav__listitem {
+  margin: 0 1rem;
+  transition: 0.3s color;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav__listitem:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+      .nav {
+        flex-direction: column;
+      }
+      .nav__listitem {
+        margin: 0 1rem;
+      }
+}
