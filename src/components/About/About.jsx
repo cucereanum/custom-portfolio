@@ -4,6 +4,12 @@ import backgroundVideo from "../../files/video.mp4";
 import mario from '../../files/mario.png';
 
 
+const iconStyle = {
+  fontSize: '3rem',
+   marginTop:'-1rem',
+   marginRight:'2rem',
+   opacity: 0.8,
+  };
 
 function About() {
 
@@ -22,12 +28,19 @@ const starFunc = (number) =>   {
         <source src={backgroundVideo} type="video/mp4" />
       </video>
       <div className="about grid ">
-        <div className="about__description">
-            <h2 className="about__title">About me</h2>
-             <h4 className="about__intro">Hello there! <br /> My name is Marius Cucereanu. <br /> I'm passionate about web development, learning something new every day and being a better version of myself.</h4>
+        <div   className="about__description">
+            <h2 data-aos="fade-up" 
+    data-aos-duration="1000" className="about__title">About me</h2>
+             <h4 data-aos="fade-up" 
+    data-aos-duration="1500" className="about__intro">Hello there! <br /> My name is Marius Cucereanu. <br /> I'm passionate about web development, learning something new every day and being a better version of myself.</h4>
         <br />
-            <h3 className="about__skills">My skills  <i>(5 star ratings)</i>:</h3>
-            <div className="about_skills--list">
+            <h3 data-aos="fade-up" data-aos-duration="1000"
+     className="about__skills">My skills  <i>(5 star ratings)</i>:</h3>
+            <div data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" 
+     className="about_skills--list">
           <ul className="list--front">
               <li className="list--header">Front-end</li>
               <br/>
@@ -53,13 +66,15 @@ const starFunc = (number) =>   {
             </li>
           </ul>
             </div>
-               <ul className="list--other">
+               <ul data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" 
+    
+     className="list--other">
               <li className="list--header">Other Skills:</li>
               <br/>
             <li>Java
-              {starFunc(3)}
-            </li>
-            <li> GIT
               {starFunc(3)}
             </li>
             <li> Object-oriented programming
@@ -70,14 +85,26 @@ const starFunc = (number) =>   {
             </li>
           </ul>
         </div>
-        <img className="about__image" src={mario} alt="Mario"/>
+        <img data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="about__image" src={mario} alt="Mario"/>
         </div>
         <div className="about__footer">
-          <h5 className="footer__copyright">Copyright 2021 MarioDev</h5>
+          <h5 className="footer__copyright">Copyright &copy; 2021 MarioDev</h5>
           <ul className="footer__list">
-            <li>icon</li>
-            <li>icon</li>
-            <li>icon</li>
+            <li className="tooltip"> <a className="footer__link" href="https://www.linkedin.com/in/cucereanum/" target="_blank" rel="noopener noreferrer">
+              <span className="tooltiptext tooltip-ex-top">Linkedin</span>
+              <i style={iconStyle} class="fab fa-linkedin"></i>
+            </a>
+              </li>
+            <li className="tooltip"> <a className="footer__link" href="https://github.com/cucereanum/" target="_blank" rel="noopener noreferrer">
+             <span className="tooltiptext tooltip-ex-top">Github</span>
+              <i style={iconStyle} class="fab fa-github"></i>
+            </a></li>
+            <li className="tooltip"><a className="footer__link" href="https://www.instagram.com/cucereanum/?hl=ro" target="_blank" rel="noopener noreferrer">
+                <span className="tooltiptext tooltip-ex-top">Instagram</span>
+              <i style={iconStyle} class="fab fa-instagram"></i>
+            </a></li>
           </ul>
         </div>
         </div>
