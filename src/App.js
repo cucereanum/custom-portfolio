@@ -1,15 +1,25 @@
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import { Player } from "video-react";
-import About from "./components/About/About";
+import NavBar from "./components/navbar/NavBar";
+
+import About from "./components/about/About";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer";
+import Contacts from "./components/contacts/Contacts";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <About />
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={About} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/contacts" component={Contacts} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
