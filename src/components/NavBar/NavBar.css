@@ -44,7 +44,11 @@ h3 {
   .nav {
     flex-direction: column;
   }
+  .nav__list {
+    justify-items: center;
+  }
   .nav__listitem {
     margin: 0 1rem;
+    font-size: 1.5rem;
   }
 }

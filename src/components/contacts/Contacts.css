@@ -70,3 +70,13 @@
 .contact-button:focus {
   outline: 0;
 }
+
+@media screen and (max-width: 800px) {
+  .container-contact {
+    width: 80%;
+  }
+  .contact-button {
+    height: 5rem;
+    margin-left: 70%;
+  }
+}

@@ -2,14 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles(() => ({
   root: {
-    position: "relative",
-    maxWidth: 345,
-    maxHeight: "100vh",
-    backgroundColor: "#555",
-    color: "#fff",
+    backgroundColor: "black",
+    border: "none",
+    borderRadius: "10px",
+  },
+
+  linkIcons: {
+    justifyContent: "flex-end",
   },
   media: {
-    paddingTop: "56.25%",
-    height: 0,
+    height: 100,
+    width: "100%",
+    paddingTop: "35%",
+    objectFit: "contain",
   },
 }));
